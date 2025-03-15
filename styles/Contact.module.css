@@ -1,0 +1,219 @@
+/* Container for the whole form section */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh; /* ✅ Full viewport height */
+}
+.contactSection {
+  max-width: 800px;
+  margin: 1px 0 0 10%; 
+  flex-grow: 1;
+}
+
+/* Main heading */
+.heading {
+  font-size: 130px;
+  color: #6B353D;
+  margin-bottom: 10px;
+  font-family: 'BOLDE', sans-serif;
+  text-align: start;
+  line-height: 0.8;
+}
+
+/* Subtitle under the heading */
+.subtitle {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: start;
+}
+
+/* The form itself */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Two-column fields for name + email */
+.formRow {
+  display: flex;
+  gap: 3vw;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  justify-content: space-between;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 45%;
+}
+
+/* Full-width subject field (optional) */
+.formGroupMessage {
+  width: 100%;
+}
+
+/* Subject input uses black bottom border specifically */
+.subjectInput {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  padding: 5px 0;
+  outline: none;
+  width: 100%;
+}
+
+/* Generic input styling for name/email */
+.input {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  padding: 5px 0;
+  outline: none;
+  width: 100%;
+}
+
+
+.textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  padding: 5px 0;
+  outline: none;
+  resize: none; /* Disable manual resizing */
+  height: 80px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Highlight on focus */
+.input:focus,
+.subjectInput:focus,
+.textarea:focus {
+  border-bottom-color: #6B353D; 
+  
+}
+
+/* Optional horizontal divider */
+.divider {
+  margin: 20px 0;
+  height: 1px;
+  background-color: #eee;
+  border: none;
+}
+
+/* Send button */
+.submitBtn {
+  align-self: flex-start;
+  background-color: #ddd; 
+  color: #814d4d;
+  border: 1px solid #814d4d; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; 
+  width: 100%;
+  max-width: 200px;
+  display: block; 
+  text-align: center; 
+  margin-bottom: 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submitBtn:hover {
+  background-color: #ccc;
+}
+.footer {
+  margin-top: auto; /* ✅ Pushes footer to bottom */
+}
+/* 💻 Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+  .contactSection {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 50px;
+    text-align: start;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    text-align: start;
+  }
+
+  .formRow {
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+
+  .formGroup {
+    min-width: 48%;
+  }
+
+  .subjectInput,
+  .textarea,
+  .input {
+    width: 100%;
+  }
+}
+
+/* 📱 Mobile Responsive (480px and below) */
+@media (max-width: 480px) {
+  .contactSection {
+    max-width: 75%;
+    padding: 15px;
+    align-items: start;
+    margin: 1px 0 0 10%;
+    padding: 10px 0px;
+  }
+
+  .heading {
+    font-size: 50px;
+    text-align: start;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    text-align: start;
+  }
+
+  .formRow {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+
+  .formGroup {
+    min-width: 48%; /* Ensures Full Name & Email stay on the same row */
+  }
+
+  .subjectInput,
+  .textarea,
+  .input {
+    width: 100%;
+  }
+
+  .submitBtn {
+  align-self: flex-start;
+  background-color: #ddd; 
+  color: #814d4d;
+  border: 1px solid #814d4d; 
+  font-size: 10px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; 
+  display: block; 
+  text-align: center; 
+  width: 50%;
+  }
+}

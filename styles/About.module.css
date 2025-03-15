@@ -1,0 +1,290 @@
+/* styles/About.module.css */
+/* Top-level image container */
+.topImageContainer {
+  width: 100%; 
+  overflow: hidden;
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: 130vh;
+  object-fit: cover; /* ensure it covers container */
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.textBlock {
+  text-align: left;
+  width: 80%;
+}
+
+.textBlock h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.textBlock p {
+  font-size: 28px;
+  line-height: 1;
+  color: #000;
+}
+
+/* INTRO TEXT SECTION */
+.introSection {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.introSection h2 {
+  font-size: 70px;
+  color: #4A3B46;
+  margin-bottom: 20px;
+  width: 80vw;
+  margin: 0 auto;
+  font-family: 'BOLDE', sans-serif;
+}
+
+/* VISION & MISSION SECTION */
+.visionMission {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  margin: 50px auto;
+  gap: 60px; 
+  text-align: start;
+}
+
+/* Text Section */
+.textSection {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  padding-left: 8vw;
+}
+
+/* Headings */
+.visionBlock h2,
+.missionBlock h2 {
+  font-size: 42px;
+  color: #6B353D;
+  margin-bottom: 8px; 
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.visionBlock h3,
+.missionBlock h3 {
+  font-size: 32px;
+  margin-bottom: 3px; 
+  font-weight: 600;
+}
+
+.visionBlock p,
+.missionBlock p {
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 20px; 
+}
+
+/* Image Section */
+.imageSection {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Mission Image */
+.missionImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  align-self: center;
+}
+
+
+/* FEATURES SECTION */
+.featuresSection {
+  background-color: #F6F7F4;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.featuresSection h2 {
+  font-size: 70px;
+  color: #6B353D;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-family: 'BOLDE', sans-serif;
+}
+
+/* Container for the 3 icons */
+.featuresList {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Individual feature cards */
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  border: 1px solid transparent;
+}
+
+.featureItem img {
+  width: 10vw;
+  height: 15vh;
+  margin-bottom: 10px;
+}
+
+.featureItem p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3D3D3D;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (max-width: 768px) {
+  .heroImage {
+    width: 100%;
+    height: 60vh; 
+  }
+  .textBlock {
+    width: 90%;
+  }
+
+  .textBlock h1 {
+    font-size: 45px; 
+  }
+
+  .textBlock p {
+    font-size: 28px; 
+    line-height: 1.4;
+  }
+  .visionMission {
+    flex-direction: row; 
+    align-items: center;
+    gap: 30px;
+  }
+ 
+  .textSection {
+    flex: 1;
+    padding-left: 3vw;
+  }
+
+  .visionBlock h2,
+  .missionBlock h2 {
+    font-size: 28px;
+  }
+
+  .visionBlock h3,
+  .missionBlock h3 {
+    font-size: 22px;
+  }
+
+  .visionBlock p,
+  .missionBlock p {
+    font-size: 16px;
+  }
+
+  .imageSection {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .missionImage {
+    max-width: 85%;
+    height: 50vh;
+  }
+  .featureItem {
+    min-width: 150px;
+  }
+
+  .featureItem img {
+    width: 12vw;
+    max-height: 10vh;
+  }
+
+  .featureItem p {
+    font-size: 18px;
+  }
+  .featuresList {
+    gap: 1vh;
+    
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .heroImage {
+    width: 100%;
+    height: 60vh; 
+  }
+  .visionMission {
+    flex-direction: row; 
+    gap: 15px;
+  }
+
+  .textSection {
+    padding-left: 2vw; 
+  }
+
+  .visionBlock h2,
+  .missionBlock h2 {
+    font-size: 24px;
+  }
+
+  .visionBlock h3,
+  .missionBlock h3 {
+    font-size: 20px;
+  }
+
+  .visionBlock p,
+  .missionBlock p {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .imageSection {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .missionImage {
+    max-width: 75%; 
+    height: 30vh;
+  }
+  .featureItem {
+    min-width: 120px;
+  }
+
+  .featureItem img {
+    width: 15vw;
+    max-height: 8vh;
+  }
+
+  .featureItem p {
+    font-size: 16px;
+  }
+}
